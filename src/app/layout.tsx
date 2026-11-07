@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -37,7 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script
+        <Script
+          id="sansad-sync"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function () {
@@ -59,12 +62,8 @@ export default function RootLayout({
         />
         <link rel="modulepreload" href="/assets/rooms-CRfnBsqC.js" />
         <link rel="modulepreload" href="/assets/three-CJyKo-TQ.js" />
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script type="module" crossOrigin="anonymous" src="/assets/main-CfQ2THv5.js" />
       </head>
-      <body suppressHydrationWarning>
-        {children}
-      </body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
