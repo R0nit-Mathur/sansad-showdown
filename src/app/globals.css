@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/JTUSjIg69CK48gW7PXoo9WlhyyTh89Y.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Teko';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/LYjNdG7kmE0gfaN9pQlCpVo.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Teko';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/LYjNdG7kmE0gfaN9pQlCpVo.woff2') format('woff2');
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Teko", "Bebas Neue", Impact, sans-serif;
+  --font-mono: ui-monospace, monospace;
+}
+
+:root {
+  --background: #120a06;
+  --foreground: #ffffff;
+}
+
+body {
+  background: #120a06;
+  color: #ffffff;
+  font-family: Teko, Bebas Neue, Impact, sans-serif;
+}
+
+@import "./main-C4DN45Lw.css";
